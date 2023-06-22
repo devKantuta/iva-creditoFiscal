@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>IVA-CREDITO.FISCAL</title>
+</head>
+<body>
+  <form action="">
+    <header>
+      <div class="gastos">
+        <label for="cant">CALCULO DE IVA-CF:
+        </label>
+        <input type="text" name="cant" id="cant" required class="cant">
+        <small>Ej-> 400:20:50.5:40.45</small>
+      </div>
+
+      <div class="calcular">
+        <button class="btn-calcular">CALCULAR</button>
+      </div>
+    </header>
+
+    <div class="error">
+      <span>&#9888;</span> CARACTERES INVALIDOS, SOLO ES PERMITIDO: 
+      <p>* Numeros(9-0)</p>
+      <p>* punto(.)</p>
+      <p>* dos puntos(:)</p>
+    </div>
+    
+  </form>
+  <table class="tabla">
+    <thead>
+      <tr>
+        <td># Cantidades</td>
+        <td> Imp. IVA(87%)</td>
+        <td>C. Fiscal(13%)</td>
+      </tr>
+    </thead>
+
+    <tbody id="tbody-items"></tbody>
+    <tfoot id="tfooter"></tfoot>
+  </table>
+  <template id="templete-table">
+    <tr>
+        <td class="cantidad">100.00</td>
+        <td class="iva">87.00</td>
+        <td class="fiscal">13.00</td>
+        
+    </tr>
+    
+  </template>
+  <!-- mostrando footer -->
+  <template id="templeteTfooter">
+    <tr>
+      <td class="total-cantidad">total: <span>300</span></td>
+      <td class="total-iva">total: <span>500</span></td>
+      <td class="total-fiscal">total: <span>540</span></td>
+    </tr>
+  </template>
+  
+  <script src="script.js"></script>
+</body>
+</html>
